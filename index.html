@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/css/style.css"/>
+    <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -84,7 +85,7 @@
             </div>
             <div class="basis-1/2">
             <header>
-                <h2 class="text-3xl font-bold uppercase pl-3 sm:pt-3 cursor-pointer hover:underline"> Tarte au citron meringuée</h2>
+                <h2 class="text-4xl font-bold uppercase pl-3 sm:pt-3 cursor-pointer hover:underline"> Tarte au citron meringuée</h2>
             </header>
             <p class="text-xl pl-3 sm:pt-3">
                 Cette tarte au citron offre un équilibre parfait entre une pâte sablée croustillante et 
@@ -100,7 +101,7 @@
 <!--Début section lunch-->
 <section>
     <div class="container mx-auto px-2">
-    <h2 class="group mx-3 mt-4 text-3xl font-bold uppercase pl-3 sm:pt-3 hover:underline cursor-pointer">Lunch</h2>
+    <h2 class="group mx-3 mt-4 text-4xl font-bold uppercase pl-3 sm:pt-3 hover:underline cursor-pointer">Lunch</h2>
         <!--Début composant Tailwind-->
     <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
         <div
@@ -198,11 +199,11 @@
 </section>
 <!--Fin section lunch-->
 
-<!--Début section -->
+<!--Début section souper rapides -->
 <section>
     <div class="container mx-auto px-2">
-    <h2 class="group mx-3 mt-4 text-3xl font-bold uppercase pl-3 sm:pt-3 hover:underline cursor-pointer">Souper rapides</h2>
-        <!--Début composant Tailwind-->
+    <h2 class="group mx-3 mt-4 text-4xl font-bold uppercase pl-3 sm:pt-3 hover:underline cursor-pointer">Soupers rapides</h2>
+    <!--Début composant Tailwind-->
     <div class="grid-cols-1 sm:grid md:grid-cols-3 ">
         <div
           class="mx-3 mt-6 flex flex-col self-start rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
@@ -294,8 +295,42 @@
           </div>
         </div>
       </div>
-     </div>
+    </div>
+    <!--Fin section composant Tailwind-->
 </section>
-<!--Fin section composant Tailwind-->
+<!--Fin section souper rapides-->
 
+<!--Début section catégories-->
+<section>
+    <div class="container mx-auto px-2">
+        <h2 class="group mx-3 mt-4 text-4xl font-bold uppercase pl-3 sm:pt-3 hover:underline cursor-pointer">Catégories</h2>
+        <div class="md:grid gap-4 grid-cols-12 mx-3 pt-6">
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2" >
+                <i class="fa-4x fa-border fa-solid fa-seedling cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Végane</h3>
+            </div>
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2">
+                <i class="fa-4x fa-border fa-solid fa-burger cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Burger</h3>
+            </div>
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2">
+                <i class="fa-4x fa-border fa-solid fa-drumstick-bite cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Volaille</h3>
+            </div>
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2">
+                <i class="fa-4x fa-solid fa-pizza-slice fa-border cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Pizza</h3>
+            </div>
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2">
+                <i class="fa-4x fa-border fa-solid fa-fish-fins cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Fruits de mer</h3>
+            </div>
+            <div class="xs:col-span-6 md:col-span-4 lg:col-span-2">
+                <i class="fa-4x fa-solid fa-cookie-bite fa-border cursor-pointer"></i>
+                <h3 class="mb-2 pl-2 pt-2 text-l font-medium leading-tight cursor-pointer hover:underline">Dessert</h3>
+            </div>
+        </div>    
+    </div>
+</section>
+<!--Fin section catégories-->
 </html>
