@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style/css/style.css"/>
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="validationJs.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -127,8 +128,66 @@
 </section>
 <!--Fin composant Tailwind-->
 
-<section>
-    
+<section class="bg-red-600">
+    <div class="container flex justify-center items-center mx-auto">
+        <form class="form" onsubmit="return validateForm()" novalidate>
+            <h3 class="font-bold text-xl">Envoyez-nous votre recette pour une chance de figurer dans notre blogue!</h3>
+            <div class="form__input-control">
+                <label for="firstName" class="font-bold pt-5">Prénom</label>
+                <input id="firstName" name="firstName" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="name" class="font-bold">Nom</label>
+                <input id="name" name="name" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="dateOfBirth" class="font-bold">Date de naissance</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <h4 class="font-bold mb-2">Sexe</h4>
+                <div class="flex items-center mb-2">
+                    <label for="female" class="font-bold pr-1">F</label>
+                    <input id="female" name="gender" type="radio" value="female"/>
+                </div>
+                <div class="flex items-center">
+                    <label for="male" class="font-bold">M</label>
+                    <input id="male" name="gender" type="radio" value="male"/>
+                </div>
+                <div class="form__error-message text-red-500 text-sm mt-1"></div>
+            </div>
+            
+            <div class="form__input-control">
+                <label for="adress" class="font-bold">Adresse</label>
+                <input id="adress" name="adress" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="city" class="font-bold">Ville</label>
+                <input id="city" name="city" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="postalCode" class="font-bold">Code Postal</label>
+                <input id="postalCode" name="postalCode" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="email" class="font-bold">Adresse courriel</label>
+                <input id="email" name="email" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="recette" class="font-bold">Recette</label>
+                <textarea class="form__textarea" id="recette" name="recette"></textarea> 
+                <div class="form__error-message pb-8"></div>
+                </div>
+                <button class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" type="submit">Soumettre</button>
+            </form>
+    </div>
 </section>
 
 

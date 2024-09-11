@@ -4,6 +4,59 @@
     padding: 0;
 }
 
+.form {
+    max-width: 34rem;
+    width: 100%;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: whitesmoke;
+    border-radius: 6%;
+    font-size: 15px;
+}
+
+
+.form__input-control{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+        input{
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        font-size: 12px;
+        padding: 8px;
+        width: 30rem;
+        
+        }&:focus{
+            outline: 0;
+        }
+}
+
+textarea{
+    width: 30rem;
+    height: 10rem;
+}
+
+.form__error-message{
+    @extend .form__input-control;
+    color: #ff3860;
+    font-size: 11px;
+    height: 13px;
+}
+
+.success input{
+    @extend .form__input-control;
+    border-color: #09c372;
+}
+
+
+.error input{
+    @extend .form__input-control;
+    border-color: #ff3860;
+}
+
+
 
 
 
