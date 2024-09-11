@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css"/>
+    <script src="tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="validationJs.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Taste Buds</title>
+</head>
+<body>
+<!--Début Composant Tailwind -->
+<header>
+    <nav class="w-screen bg-red-600 h-fit overflow-hidden">
+        <div class="py-4 lg:px-8 px-4 max-w-[1280px] h-16 m-auto text-white flex items-center justify-between">
+            <div>
+                <a href="index.html" class="lg:text-2xl text-xl uppercase tracking-wider cursor-pointer font-bold">Taste Buds</a>
+            </div>
+            <div class="flex lg:gap-8 gap-6 uppercase tracking-wider cursor-pointer text-lg items-center" id="navItems">
+                <span class="group">
+                    <a href="index.html">Recettes</a>
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
+                </span>
+                <span class="group">
+                    Blogue
+                    <div class="w-0 group-hover:w-full h-0.5 bg-white ease-in-out duration-500"></div>
+                </span>
+
+            </div>
+            <div id="hamburger" class="fa fa-bars flex items-center text-xl" style="display:none;"></div>
+            <div id="mobileNav"
+                class="fixed flex flex-col gap-8 pt-16 px-4 text-xl uppercase bg-red-600 h-full inset-0 top-16 w-[70%] left-[-70%] ease-in-out duration-500 cursor-pointer">
+                <span>Recettes</span>
+                <span>Blogue</span>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        var navItems = document.getElementById("navItems");
+        var mobileNav = document.getElementById("mobileNav");
+        var hamburger = document.getElementById("hamburger");
+
+
+        function adjustNavbar() {
+            screenWidth = parseInt(window.innerWidth);
+
+            if (screenWidth < 541) {
+                navItems.style.display = "none";
+                hamburger.style.display = "flex";
+            }
+            else {
+                navItems.style.display = "flex";
+                hamburger.style.display = "none";
+            }
+        }
+
+        adjustNavbar();
+
+        window.addEventListener("resize", adjustNavbar);
+
+        hamburger.addEventListener("click", function () {
+            mobileNav.classList.toggle("left-[-70%]");
+            hamburger.classList.toggle("fa-bars");
+            hamburger.classList.toggle("fa-close");
+        })
+    </script>
+</header>
+<!--Fin Composant Tailwind -->
+
+<!--Début composant Tailwind-->
+<section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">Découvrez notre blogue!</h1>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+            <div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="./img/vegan.jpg" alt="Couscous végane">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        Couscous végane
+                    </a>
+
+                    <span class="text-sm text-gray-500 dark:text-gray-300">29 août 2024</span>
+                </div>
+            </div>
+
+            <div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="./img/lunch.jpg" alt="salade pois-chiches">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        Salade de pois-chiches et tomates
+                    </a>
+                    <span class="text-sm text-gray-500 dark:text-gray-300">22 août 2024</span>
+                </div>
+            </div>
+
+            <div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="./img/tacos.jpg" alt="tacos végétariens">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        Tacos végétariens
+                    </a>
+                    <span class="text-sm text-gray-500 dark:text-gray-300">7 août 2024</span>
+                </div>
+            </div>
+
+            <div class="lg:flex">
+                <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="./img/poulet.jpg" alt="Poulet">
+
+                <div class="flex flex-col justify-between py-6 lg:mx-6">
+                    <a href="#" class="text-xl font-semibold text-gray-800 hover:underline dark:text-white ">
+                        Poulet au arachides et fèves vertes
+                    </a>
+                    <span class="text-sm text-gray-500 dark:text-gray-300">26 juillet 2024</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Fin composant Tailwind-->
+
+<section class="bg-red-600">
+    <div class="container flex justify-center items-center mx-auto">
+        <form class="form" onsubmit="return validateForm()" novalidate>
+            <h3 class="font-bold text-xl">Envoyez-nous votre recette pour une chance de figurer dans notre blogue!</h3>
+            <div class="form__input-control">
+                <label for="firstName" class="font-bold pt-5">Prénom</label>
+                <input id="firstName" name="firstName" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="name" class="font-bold">Nom</label>
+                <input id="name" name="name" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="dateOfBirth" class="font-bold">Date de naissance</label>
+                <input id="dateOfBirth" name="dateOfBirth" type="date" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <h4 class="font-bold mb-2">Sexe</h4>
+                <div class="flex items-center mb-2">
+                    <label for="female" class="font-bold pr-1">F</label>
+                    <input id="female" name="gender" type="radio" value="female"/>
+                </div>
+                <div class="flex items-center">
+                    <label for="male" class="font-bold">M</label>
+                    <input id="male" name="gender" type="radio" value="male"/>
+                </div>
+                <div class="form__error-message text-red-500 text-sm mt-1"></div>
+            </div>
+            
+            <div class="form__input-control">
+                <label for="adress" class="font-bold">Adresse</label>
+                <input id="adress" name="adress" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="city" class="font-bold">Ville</label>
+                <input id="city" name="city" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="postalCode" class="font-bold">Code Postal</label>
+                <input id="postalCode" name="postalCode" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="email" class="font-bold">Adresse courriel</label>
+                <input id="email" name="email" type="text" />
+                <div class="form__error-message"></div>
+            </div>
+            <div class="form__input-control">
+                <label for="recette" class="font-bold">Recette</label>
+                <textarea class="form__textarea" id="recette" name="recette"></textarea> 
+                <div class="form__error-message pb-8"></div>
+                </div>
+                <button class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" type="submit">Soumettre</button>
+            </form>
+    </div>
+</section>
+
+
+<!--Début du composant Tailwind-->
+<div class="antialiased mx-auto max-w-screen-sm py-16">
+    <h3 class="mb-4 text-lg font-semibold text-gray-900">Commentaires</h3>
+  
+    <div class="space-y-4">
+  
+      <div class="flex">
+        <div class="flex-shrink-0 mr-3">
+          <img class="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src="https://b.fssta.com/uploads/application/nfl/headshots/21467.vresize.350.350.medium.36.png" alt="Photo profil">
+        </div>
+        <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+          <strong>Justin</strong> <span class="text-xs text-gray-400">3:34 PM</span>
+          <p class="text-sm">
+            Les meilleures recettes sont sur ce blog! #foodie
+          </p>
+          <div class="mt-4 flex items-center">
+            <div class="flex -space-x-2 mr-2">
+              <img class="rounded-full w-6 h-6 border border-white" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80" alt="">
+              <img class="rounded-full w-6 h-6 border border-white" src="https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=100&h=100&q=80" alt="">
+            </div>
+            <div class="text-sm text-gray-500 font-semibold">
+              5 Réponses
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="flex">
+        <div class="flex-shrink-0 mr-3">
+          <img class="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="">
+        </div>
+        <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+          <strong>Sarah</strong> <span class="text-xs text-gray-400">8:47 PM</span>
+          <p class="text-sm">
+            "Je viens de tester la recette de tarte au citron de Taste Buds, 
+            et c'était un vrai délice! L'équilibre parfait entre le sucré et l'acidité... 
+            un incontournable pour mes prochaines réceptions!"
+          </p>
+          
+          <h4 class="my-5 uppercase tracking-wide text-gray-400 font-bold text-xs">Réponses</h4>
+  
+          <div class="space-y-4">
+            <div class="flex">
+              <div class="flex-shrink-0 mr-3">
+                <img class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8" src="https://b.fssta.com/uploads/application/nfl/headshots/13105.vresize.250.250.medium.61.png" alt="Photo profil">
+              </div>
+              <div class="flex-1 bg-gray-100 rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+                <strong>Christian</strong> <span class="text-xs text-gray-400">9:01 PM</span>
+                <p class="text-xs sm:text-sm">
+                    "Je suis d'accord avec toi ! Je l'ai essayée le week-end dernier 
+                    et tout le monde a adoré. La croûte est super croustillante, et 
+                    la garniture au citron a juste ce qu'il faut de peps. Une vraie réussite!"
+                </p>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="flex-shrink-0 mr-3">
+                <img class="mt-3 rounded-full w-6 h-6 sm:w-8 sm:h-8" src="https://randomuser.me/api/portraits/women/90.jpg" alt="Photo profil">
+              </div>
+              <div class="flex-1 bg-gray-100 rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
+                <strong>Josée</strong> <span class="text-xs text-gray-400">9:34 PM</span>
+                <p class="text-xs sm:text-sm">
+                    "Je l'ai aussi testée récemment, et je confirme, c'est une pure merveille !"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Fin du composant Tailwind-->
+
+<!--Début composant Tailwind-->
+<footer class="bg-red-600 dark:bg-whitext-white">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+              <a href="index.html" class="flex items-center">
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap uppercase text-white">Taste buds</span>
+              </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Suivez-nous</h2>
+                  <ul class="white-500 dark:white-400 font-medium">
+                      <li class="mb-4">
+                          <a href="https://facebook.com" target=”_blank” class="hover:underline text-white">Facebook</a>
+                      </li>
+                      <li>
+                          <a href="https://twitter.com" target=”_blank” class="hover:underline text-white">Twitter</a>
+                      </li>
+                  </ul>
+              </div>
+              <div>
+                  <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">Ressources</h2>
+                  <ul class="white-500 dark:white-400 font-medium">
+                      <li class="mb-4">
+                          <a href="index.html" class="hover:underline text-white">Carrières</a>
+                      </li>
+                      <li>
+                          <a href="index.html" class="hover:underline text-white">Termes et conditions</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-white sm:text-center dark:white-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Taste Buds™ </a>Fait par Laurie Du Sablon
+          </span>
+          <div class="flex mt-4 sm:justify-center sm:mt-0">
+              <a href="#" class="white-500 hover:text-white dark:hover:text-white">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                        <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                    </svg>
+                  <span class="sr-only">Facebook page</span>
+              </a>
+              <a href="#" class="white-500 hover:text-white dark:hover:text-white ms-5">
+                  <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                    <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+                </svg>
+                  <span class="sr-only">Twitter page</span>
+              </a>
+          </div>
+      </div>
+    </div>
+</footer>
+<!--Fin composant Tailwind-->
+</body>
+</html>
