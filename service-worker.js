@@ -2,7 +2,11 @@
 const CACHE_NAME = 'static-cache-v1';
 //add list of files to cache here
 const FILES_TO_CACHE = [
-    'offline.html',
+    'index.html',
+    'blogue.html',
+    'tarte.html',
+    'validationJs.js',
+    'tailwind.config.js',
 ];
 
 //INSTALLATION
