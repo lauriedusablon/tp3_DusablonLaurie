@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Taste Buds App">
+    <meta name="theme-color" content="#FFFFFF" />
     <link rel="stylesheet" href="style/css/style.css"/>
+    <link rel="manifest" href="manifest.json">
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="validationJs.js"></script>
@@ -12,14 +15,25 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Taste Buds</title>
+    <script>
+        // Register service worker.
+    if ('serviceWorker' in navigator) { 
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js') 
+                .then((reg) => {
+                console.log('Service worker registered.', reg); 
+                });
+            }); 
+        }
+     </script>
 </head>
 <body>
 <!--Début Composant Tailwind -->
 <header>
-    <nav class="w-screen bg-red-600 h-fit overflow-hidden">
-        <div class="py-4 lg:px-8 px-4 max-w-[1280px] h-16 m-auto text-white flex items-center justify-between">
+    <nav class="w-screen pb-12 h-fit overflow-hidden">
+        <div class="bg-red-600 py-4 lg:px-8 px-4 max-w-[1280px] h-16 mx-auto text-white flex items-center justify-between">
             <div>
-                <a href="index.html" class="lg:text-2xl text-xl uppercase tracking-wider cursor-pointer font-bold">Taste Buds</a>
+                <a href="index.html" class="font-sans lg:text-2xl text-xl uppercase tracking-wider cursor-pointer font-bold">Taste Buds</a>
             </div>
             <div class="flex lg:gap-8 gap-6 uppercase tracking-wider cursor-pointer text-lg items-center" id="navItems">
                 <span class="group">
@@ -74,14 +88,14 @@
 <!--Fin Composant Tailwind -->
 
 <section>
-    <div class="container mx-auto px-2 py-2">
-        <article class="flex items-center pt-14 max-md:block">
+    <div class="container mx-auto px-2">
+        <article class="flex items-center max-md:block bg-slate-50 rounded-lg">
             <div class="basis-1/2">
-                <img class="rounded-lg cursor-pointer" src="img/tarte.jpg" alt="Tarte">
+                <img class="rounded-lg cursor-pointer pr-6" src="img/tarte.jpg" alt="Tarte">
             </div>
             <div class="basis-1/2">
-                <a href="tarte.html" class="text-3xl font-bold uppercase pl-6 sm:pt-3 cursor-pointer hover:underline">Tarte au citron meringuée</a>
-                <p class="text-xl pl-6 sm:pt-3">
+                <a href="tarte.html" class="font text-3xl font-bold uppercase sm:pt-3 cursor-pointer hover:underline">Tarte au citron meringuée</a>
+                <p class="text-xl sm:pt-3">
                 Cette tarte au citron offre un équilibre parfait entre une pâte sablée croustillante et 
                 une crème onctueuse au citron frais, couronnée d'une meringue légère dorée à la perfection. 
                 Un dessert rafraîchissant et gourmand, idéal pour toutes les occasions.

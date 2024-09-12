@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5 {
   font-family: "Merriweather", serif;
 }
 
+.font {
+  font-family: "Merriweather", serif;
+}
+
 .form {
   max-width: 34rem;
   width: 100%;

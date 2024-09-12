@@ -1,0 +1,42 @@
+{
+    "name": "TasteBuds",
+    "short_name": "TB",
+    "icons": [
+        {
+            "src": "demoGithubPages/img/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "demoGithubPages/img/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }],
+
+        "screenshots": [
+            {
+             "src": "demoGithubPages/img/pexels-pixabay-416160.jpg",
+              "sizes": "1914x878",
+              "type": "image/png",
+              "form_factor": "narrow",
+              "label": "Le chat de Bengal screenshots"
+            },
+            {
+              "src": "demoGithubPages/img/pexels-pixabay-416160.jpg",
+              "sizes": "1914x878",
+              "type": "image/png",
+              "form_factor": "wide",
+              "label": "Le chat de Bengal screenshots"
+            }
+        ],
+
+        "start_url": "index.html",
+        "display": "standalone",
+        "background_color": "#ffffff",
+        "description": "Le chat de bengal",
+        "theme_color": "#ffffff",
+        "lang": "fr",
+        "orientation": "landscape"
+}
