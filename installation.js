@@ -13,7 +13,7 @@ installButton.removeAttribute('hidden');
 
 function installPWA(evt) {
    deferredInstallPrompt.prompt();
-   evt.setAttribute('hidden', true);
+   evt.srcElement.setAttribute('hidden', true);
 
    deferredInstallPrompt.userChoice
     .then((choice) => {

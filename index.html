@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Taste Buds App">
     <meta name="theme-color" content="#FFFFFF" />
-    <link rel="stylesheet" href="style/css/style.css"/>
+    <link rel="stylesheet" href="style/css/style.css">
     <link rel="manifest" href="manifest.json">
     <script src="tailwind.config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="validationJs.js"></script>
-    <script src="install.js"></script>
+    <script src="installation.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="./img/favicon.png">
     <title>Taste Buds</title>
     <script>
         // Register service worker.
@@ -32,7 +33,7 @@
 <!--Début Composant Tailwind -->
 <header>
     <nav class="w-screen pb-12 h-fit overflow-hidden">
-        <div class="bg-red-600 py-4 lg:px-8 px-4 max-w-[1280px] h-16 mx-auto text-white flex items-center justify-between">
+        <div class="bg-red-600 py-4 lg:px-8 px-4 h-16 mx-auto text-white flex items-center justify-between">
             <div>
                 <a href="index.html" class="font-sans lg:text-2xl text-xl uppercase tracking-wider cursor-pointer font-bold">Taste Buds</a>
             </div>
@@ -90,7 +91,7 @@
 
 <section>
     <div class="container mx-auto px-2">
-        <article class="flex items-center max-md:block bg-slate-50 rounded-lg">
+        <div class="flex items-center max-md:block bg-slate-50 rounded-lg">
             <div class="basis-1/2">
                 <img class="rounded-lg cursor-pointer pr-6" src="img/tarte.jpg" alt="Tarte">
             </div>
@@ -104,7 +105,7 @@
             </div>
             <button class="nav-link px-lg-4 px-2" id="butInstall"
      aria-label="Install" hidden>Installer la PWA</button>
-        </article>
+        </div>
     </div>
 </section>
 
@@ -119,7 +120,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/salade.jpg"
-              alt="Salade César au bacon avec croutons à l'ail maison" />
+              alt="Salade César au bacon avec croutons à l'ail maison">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -149,7 +150,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/padthai.jpg"
-              alt="Pad Thai aux crevettes et tofu" />
+              alt="Pad Thai aux crevettes et tofu">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -179,7 +180,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/pizza.jpg"
-              alt="Pizza Margherita"/>
+              alt="Pizza Margherita">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -218,7 +219,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/pasta.jpg"
-              alt="Pâtes aux poivrons et épinards" />
+              alt="Pâtes aux poivrons et épinards">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -248,7 +249,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/burger.jpg"
-              alt="Burger de boeuf au fromage cheddar" />
+              alt="Burger de boeuf au fromage cheddar">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -278,7 +279,7 @@
             <img
               class="rounded-t-lg h-full"
               src="./img/saute.jpg"
-              alt="Lo mein aux légumes et sésame"/>
+              alt="Lo mein aux légumes et sésame">
           </a>
           <div class="p-4">
             <div class="flex items-center">
@@ -372,7 +373,7 @@
               </div>
           </div>
       </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8">
       <div class="sm:flex sm:items-center sm:justify-between">
           <span class="text-sm text-white sm:text-center dark:white-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Taste Buds™ </a>Fait par Laurie Du Sablon
           </span>

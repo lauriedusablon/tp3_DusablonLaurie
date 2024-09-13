@@ -3,6 +3,12 @@
     "short_name": "TB",
     "icons": [
         {
+            "src": "img/maskable_icon144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
             "src": "img/maskable_icon192.png",
             "sizes": "192x192",
             "type": "image/png",
@@ -17,18 +23,18 @@
 
         "screenshots": [
             {
-             "src": "demoGithubPages/img/pexels-pixabay-416160.jpg",
+             "src": "img/maskable_icon512.png",
               "sizes": "1914x878",
               "type": "image/png",
               "form_factor": "narrow",
-              "label": "Le chat de Bengal screenshots"
+              "label": "Taste Buds screenshots"
             },
             {
-              "src": "demoGithubPages/img/pexels-pixabay-416160.jpg",
+              "src": "img/maskable_icon512.png",
               "sizes": "1914x878",
               "type": "image/png",
               "form_factor": "wide",
-              "label": "Le chat de Bengal screenshots"
+              "label": "Taste Buds screenshots"
             }
         ],
 
