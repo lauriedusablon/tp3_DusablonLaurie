@@ -1,5 +1,5 @@
 //update cache names any time of the cached files change
-const CACHE_NAME = 'static-cache-v1';
+const CACHE_NAME = 'static-cache-v3';
 //add list of files to cache here
 const FILES_TO_CACHE = [
     'index.html',
